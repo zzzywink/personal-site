@@ -237,6 +237,11 @@
     transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(255,154,174,0.12);
   }
+
+  /* ===== Horizontal Scroll Hide ===== */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
   /* ===== Category Tabs ===== */
   .category-tab.active {
     background: var(--orange) !important;
@@ -338,8 +343,8 @@
   <a href="#" class="text-lg font-semibold gradient-text">✦ Yuan</a>
   <div class="hidden md:flex gap-8 text-sm font-medium" style="color: var(--text-mid);">
     <a href="#journey" class="hover:text-[#FF8C52] transition-colors duration-200">个人经历</a>
-    <a href="#projects" class="hover:text-[#FF8C52] transition-colors duration-200">AI 项目</a>
     <a href="#social" class="hover:text-[#FF8C52] transition-colors duration-200">自媒体</a>
+    <a href="#projects" class="hover:text-[#FF8C52] transition-colors duration-200">AI 项目</a>
     <a href="#explorer" class="hover:text-[#FF8C52] transition-colors duration-200">能力画布</a>
   </div>
   <button id="menu-btn" class="md:hidden text-xl p-1" style="color: var(--text-mid);">
@@ -350,8 +355,8 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="glass-soft fixed top-20 left-4 right-4 z-50 p-6 hidden flex-col gap-4 text-center font-medium rounded-2xl" style="color: var(--text-mid);">
   <a href="#journey" class="block py-2 hover:text-[#FF8C52] transition-colors">个人经历</a>
-  <a href="#projects" class="block py-2 hover:text-[#FF8C52] transition-colors">AI 项目</a>
   <a href="#social" class="block py-2 hover:text-[#FF8C52] transition-colors">自媒体</a>
+  <a href="#projects" class="block py-2 hover:text-[#FF8C52] transition-colors">AI 项目</a>
   <a href="#explorer" class="block py-2 hover:text-[#FF8C52] transition-colors">能力画布</a>
 </div>
 
@@ -380,7 +385,7 @@
   <!-- Main Title -->
   <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-center mb-6">
     <span style="color: var(--text-dark);">Know about</span><br>
-    <span class="gradient-text">小曾学姐</span>
+    <span class="gradient-text">曾桢贻</span>
   </h1>
 
   <!-- Typewriter -->
@@ -422,7 +427,7 @@
         <span class="gradient-text">The Practitioner</span>
         <span class="text-2xl md:text-3xl font-medium ml-3" style="color: var(--text-mid);">实践者</span>
       </h2>
-      <p style="color: var(--text-mid); font-size: 17px;">每一段经历，都是向前的脚印</p>
+      <p style="color: var(--text-mid); font-size: 19px;">不仅是供应商的"把关人"，更是品类的"操盘手"</p>
     </div>
 
     <!-- Timeline -->
@@ -435,12 +440,14 @@
           <div class="hidden md:flex w-1/2 justify-end pr-12"></div>
           <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 w-3.5 h-3.5 rounded-full border-4 border-white shadow-md z-10" style="background: var(--orange);"></div>
           <div class="md:w-1/2 md:pl-12 w-full pl-10">
-            <div class="glass-soft p-6 hover-lift">
-              <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--orange);">2024 — 至今</span>
-              <h3 class="text-xl font-semibold tracking-tight mt-2" style="color: var(--text-dark);">AI 产品负责人</h3>
-              <p class="text-sm mt-1" style="color: var(--text-mid);">某科技公司 · 上海</p>
-              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">主导 AI 对话式产品从 0 到 1 的设计与落地，探索 LLM 在消费端的创新应用场景，推动产品月活增长 300%。</p>
-              <div class="mt-4 w-full h-32 rounded-xl flex items-center justify-center text-sm" style="background: linear-gradient(135deg, rgba(255,140,82,0.1), rgba(255,154,174,0.08)); color: var(--orange); opacity: 0.6;">📸 工作照</div>
+            <div class="glass-soft overflow-hidden hover-lift">
+              <div class="p-6">
+                <h3 class="text-xl font-semibold tracking-tight gradient-text">⭐ 商业敏锐度与用户思维</h3>
+                <p class="mb-4 leading-relaxed" style="color: var(--text-dark);">在校园本地生活项目里，我从 0-1 操盘，完成市场需求调研、选品定价、活动策划，搭建公域引流 + 私域留存的转化漏斗，实现全链路运营。我还主动挖掘存量市场里桶装水、保洁这类隐藏刚需品类，项目最终实现五位数净利润</p>
+                <div class="h-44 rounded-xl overflow-hidden">
+                  <img src="image/campus-startup.jpg" alt="校园创业" class="w-full h-full object-cover">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -448,12 +455,9 @@
         <!-- Item 2 -->
         <div class="reveal flex flex-col md:flex-row items-start gap-6 relative">
           <div class="md:w-1/2 md:pr-12 w-full pl-10 md:text-right">
-            <div class="glass-soft p-6 hover-lift">
-              <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--pink);">2022 — 2024</span>
-              <h3 class="text-xl font-semibold tracking-tight mt-2" style="color: var(--text-dark);">策略产品经理</h3>
-              <p class="text-sm mt-1" style="color: var(--text-mid);">某互联网大厂 · 北京</p>
-              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">负责内容推荐策略与用户增长，通过数据驱动优化信息流分发效率，日均曝光提升 45%。</p>
-              <div class="mt-4 w-full h-32 rounded-xl flex items-center justify-center text-sm" style="background: linear-gradient(135deg, rgba(255,154,174,0.1), rgba(255,216,155,0.08)); color: var(--pink); opacity: 0.6;">📸 活动照</div>
+            <div class="glass-soft p-6 hover-lift cursor-pointer" onclick="document.getElementById('social').scrollIntoView({behavior:'smooth'})">
+              <h3 class="text-xl font-semibold tracking-tight gradient-text">⭐ 数据敏感度与自主迭代能力</h3>
+              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">运营自媒体期间，我会结合数据转化漏斗持续优化内容创作；还借助 ClaudeCode 开发了数据分析、爆款文案拆解工具，借助 AI 提升内容分析、数据分析的效率，账号累计沉淀 1.6 万粉丝。</p>
             </div>
           </div>
           <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 w-3.5 h-3.5 rounded-full border-4 border-white shadow-md z-10" style="background: var(--pink);"></div>
@@ -465,211 +469,11 @@
           <div class="hidden md:flex w-1/2 justify-end pr-12"></div>
           <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 w-3.5 h-3.5 rounded-full border-4 border-white shadow-md z-10" style="background: var(--mint);"></div>
           <div class="md:w-1/2 md:pl-12 w-full pl-10">
-            <div class="glass-soft p-6 hover-lift">
-              <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--mint);">2020 — 2022</span>
-              <h3 class="text-xl font-semibold tracking-tight mt-2" style="color: var(--text-dark);">数据分析师</h3>
-              <p class="text-sm mt-1" style="color: var(--text-mid);">某创业公司 · 深圳</p>
-              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">搭建公司数据分析体系，主导用户画像与行为分析平台建设，为产品和运营提供数据决策支持。</p>
-              <div class="mt-4 w-full h-32 rounded-xl flex items-center justify-center text-sm" style="background: linear-gradient(135deg, rgba(184,232,224,0.12), rgba(181,216,247,0.08)); color: var(--mint); opacity: 0.6;">📸 团队照</div>
+            <div class="glass-soft p-6 hover-lift cursor-pointer" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+              <h3 class="text-xl font-semibold tracking-tight gradient-text">⭐ AI 驱动新一代运营人才</h3>
+              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">在蝉妈妈实习时，我用 ComfyUI 搭建 AI 标准化工作流，批量制作电商带货视频，带动转化率提升 40%。我还熟练掌握提示词优化、VibeCoding 等技能</p>
             </div>
           </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="reveal flex flex-col md:flex-row items-start gap-6 relative">
-          <div class="md:w-1/2 md:pr-12 w-full pl-10 md:text-right">
-            <div class="glass-soft p-6 hover-lift">
-              <span class="text-xs font-semibold uppercase tracking-wider" style="color: var(--sky);">2016 — 2020</span>
-              <h3 class="text-xl font-semibold tracking-tight mt-2" style="color: var(--text-dark);">计算机科学 · 本科</h3>
-              <p class="text-sm mt-1" style="color: var(--text-mid);">某 985 高校</p>
-              <p class="mt-3 leading-relaxed" style="color: var(--text-dark);">主修计算机科学与技术，辅修数字媒体艺术。在校期间参与多个创业项目，获得国家级大创奖项。</p>
-              <div class="mt-4 w-full h-32 rounded-xl flex items-center justify-center text-sm" style="background: linear-gradient(135deg, rgba(181,216,247,0.1), rgba(212,197,240,0.08)); color: var(--sky); opacity: 0.6;">🎓 毕业照</div>
-            </div>
-          </div>
-          <div class="absolute left-[11px] md:left-1/2 md:-translate-x-1/2 w-3.5 h-3.5 rounded-full border-4 border-white shadow-md z-10" style="background: var(--sky);"></div>
-          <div class="hidden md:flex w-1/2 pl-12"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Section Divider -->
-<div class="relative z-10 flex justify-center -mb-12">
-  <div class="flex items-center gap-3 opacity-30">
-    <span class="text-xs" style="color: var(--peach);">✦</span>
-    <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#FF9AAE] to-transparent"></div>
-    <span class="text-xs" style="color: var(--sky);">✦</span>
-  </div>
-</div>
-
-<!-- ===== Projects Section ===== -->
-<section id="projects" class="relative z-10 py-24 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 reveal">
-      <div class="section-badge mb-4">🚀 AI 项目</div>
-      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">
-        <span class="gradient-text">AI Explorer</span>
-        <span class="text-2xl md:text-3xl font-medium ml-3" style="color: var(--text-mid);">AI 探索者</span>
-      </h2>
-      <p style="color: var(--text-mid); font-size: 17px;">用 AI 构建有趣、有用的产品</p>
-    </div>
-
-    <!-- Category Tabs -->
-    <div class="flex justify-center gap-3 mb-10 reveal">
-      <button class="category-tab active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300" data-category="vibecoding" style="background: rgba(255,140,82,0.08); color: var(--text-mid); border: 1px solid rgba(255,140,82,0.15);">
-        ✦ vibecoding
-      </button>
-      <button class="category-tab px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300" data-category="agent" style="background: rgba(255,140,82,0.08); color: var(--text-mid); border: 1px solid rgba(255,140,82,0.15);">
-        智能体
-      </button>
-      <button class="category-tab px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300" data-category="aigc" style="background: rgba(255,140,82,0.08); color: var(--text-mid); border: 1px solid rgba(255,140,82,0.15);">
-        AIGC 视频
-      </button>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
-      <!-- vibecoding Card 1 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="vibecoding">
-        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255,140,82,0.1), rgba(255,154,174,0.08));">
-          <img src="image/vibecoding封面-简历.jpg" alt="简历智能匹配助手" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">简历智能匹配助手</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">上传目标岗位 JD 与个人简历，智能解析岗位任职要求，自动对标简历原有内容，智能优化重构文案，一键生成高度适配岗位 JD 的定制化专属简历。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-orange">Vibe Coding</span>
-            <span class="tag-pill tag-pill-pink">LLM</span>
-          </div>
-          <a href="https://zs8tgjdmzm.coze.site" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- vibecoding Card 2 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="vibecoding">
-        <div class="h-44 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg, rgba(255,154,174,0.1), rgba(212,197,240,0.1));">
-          ✨
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">Vibe Studio · AI 创作工具</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">Vibe Coding 理念驱动的快速原型工具，用自然语言描述即可生成可交互的页面，让创意零门槛变成现实。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-pink">Vibe Coding</span>
-            <span class="tag-pill tag-pill-sky">Code Gen</span>
-          </div>
-          <a href="#" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 智能体 Card 1 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="agent">
-        <div class="h-44 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg, rgba(184,232,224,0.12), rgba(181,216,247,0.1));">
-          🤖
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">UXBot · AI 体验助手</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">基于 LLM 的智能 UX 写作与设计评审 Agent，自动分析交互稿并输出优化建议，帮助设计师快速迭代文案和交互方案。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-mint">AI Agent</span>
-            <span class="tag-pill tag-pill-sky">UX Design</span>
-          </div>
-          <a href="#" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 智能体 Card 2 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="agent">
-        <div class="h-44 flex items-center justify-center text-5xl" style="background: linear-gradient(135deg, rgba(212,197,240,0.12), rgba(255,154,174,0.08));">
-          🧠
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">数据洞察助手</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">自然语言驱动的数据分析 Agent，连接数据库后直接对话即可自动生成可视化图表与洞察报告。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-mint">AI Agent</span>
-            <span class="tag-pill tag-pill-orange">Data Viz</span>
-          </div>
-          <a href="#" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 智能体 Card 3 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="agent">
-        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(212,197,240,0.12), rgba(184,232,224,0.1));">
-          <img src="image/智能体封面-选题助手.jpg" alt="选题助手" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">选题助手</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">结合我的自媒体赛道，输出"大学校园、校园干货、教育"高度相关的优质选题</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-mint">AI Agent</span>
-            <span class="tag-pill tag-pill-orange">内容创作</span>
-          </div>
-          <a href="https://www.coze.cn/store/agent/7633999652631117851?bot_id=true" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- AIGC 视频 Card 1 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="aigc">
-        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255,140,82,0.1), rgba(255,154,174,0.08));">
-          <img src="image/aigc视频/霸总短剧.jpg" alt="霸总短剧" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">霸总短剧</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">AI 生成的霸道总裁风格短剧，沉浸式剧情体验。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-orange">AIGC</span>
-            <span class="tag-pill tag-pill-pink">短剧</span>
-          </div>
-          <a href="https://v.kuaishou.com/KMyhxDJN" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- AIGC 视频 Card 2 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="aigc">
-        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(126,207,192,0.12), rgba(181,216,247,0.1));">
-          <img src="image/aigc视频/ai摄影棚.jpg" alt="ai摄影棚" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">ai摄影棚</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">AI 驱动的虚拟摄影棚，智能生成专业级人像与产品图。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-mint">AIGC</span>
-            <span class="tag-pill tag-pill-sky">摄影</span>
-          </div>
-          <a href="https://v.kuaishou.com/np5H3v95" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- AIGC 视频 Card 3 -->
-      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col" data-category="aigc">
-        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(212,197,240,0.12), rgba(255,154,174,0.08));">
-          <img src="image/aigc视频/古人主播间.jpg" alt="古人直播间" class="w-full h-full object-cover">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">古人直播间</h3>
-          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">AI 生成的古代人物直播场景，穿越时空的趣味互动。</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="tag-pill tag-pill-pink">AIGC</span>
-            <span class="tag-pill tag-pill-orange">直播</span>
-          </div>
-          <a href="https://v.kuaishou.com/JrSuVkcJ" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
-            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
-          </a>
         </div>
       </div>
     </div>
@@ -694,7 +498,7 @@
         <span class="gradient-text">Content Creator</span>
         <span class="text-2xl md:text-3xl font-medium ml-3" style="color: var(--text-mid);">自媒体博主</span>
       </h2>
-      <p style="color: var(--text-mid); font-size: 17px;">在社交媒体中发现、分享、连接</p>
+      <p style="color: var(--text-mid); font-size: 17px;">以自媒体沉淀流量运营经验，用 AI 工具优化内容转化</p>
     </div>
 
     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -702,7 +506,7 @@
       <div class="glass-soft p-8 lg:w-1/2 reveal">
         <div class="flex items-center gap-3 mb-4">
           <span class="text-3xl">📱</span>
-          <h3 class="text-2xl font-semibold tracking-tight" style="color: var(--text-dark);">自媒体内容创作者 · <span class="gradient-text">小曾学姐</span></h3>
+          <h3 class="text-2xl font-semibold tracking-tight" style="color: var(--text-dark);">自媒体内容创作者 · <span class="gradient-text">曾桢贻</span></h3>
         </div>
         <p class="leading-relaxed mb-6" style="color: var(--text-mid);">
           普通大学生避坑的靠谱学姐，比赛国奖 / 多段实习经验，只讲干货：大学信息差、实习、比赛与 AI 工具分享
@@ -711,11 +515,11 @@
         <!-- Data Highlights -->
         <div class="grid grid-cols-3 gap-3 mb-6">
           <div class="text-center p-3 rounded-xl" style="background: linear-gradient(135deg, rgba(255,140,82,0.08), rgba(255,154,174,0.06));">
-            <div class="text-2xl font-bold" style="color: var(--orange);">111万+</div>
+            <div class="text-2xl font-bold" style="color: var(--orange);">140w+</div>
             <div class="text-xs mt-1" style="color: var(--text-mid);">爆款播放</div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background: linear-gradient(135deg, rgba(255,154,174,0.08), rgba(255,216,155,0.06));">
-            <div class="text-2xl font-bold" style="color: var(--pink);">1.5万+</div>
+            <div class="text-2xl font-bold" style="color: var(--pink);">1.6w+</div>
             <div class="text-xs mt-1" style="color: var(--text-mid);">全网粉丝</div>
           </div>
           <div class="text-center p-3 rounded-xl" style="background: linear-gradient(135deg, rgba(184,232,224,0.1), rgba(181,216,247,0.08));">
@@ -725,7 +529,7 @@
         </div>
 
         <p class="text-sm leading-relaxed mb-6" style="color: var(--text-mid);">
-          累计播放/浏览超 <strong style="color: var(--orange);">168 万</strong>，获赞收藏超 <strong style="color: var(--orange);">38.7 万</strong>，互动率、完播率、涨粉数据均表现优异。
+          累计播放/浏览超 <strong style="color: var(--orange);">1000w</strong>，获赞收藏超 <strong style="color: var(--orange);">70w</strong>，互动率、完播率、涨粉数据均表现优异。
         </p>
 
         <!-- Audience -->
@@ -755,7 +559,7 @@
           <div class="phone-grid">
             <!-- Post 1 -->
             <a href="http://xhslink.com/o/9C7rHd9AkgD" target="_blank" class="phone-post block">
-              <img src="image/封面1.jpg" alt="如果能回到大一，我绝不会再当老实学生" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-01.jpg" alt="如果能回到大一，我绝不会再当老实学生" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">如果能回到大一，我绝不会再当老实学生</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -766,7 +570,7 @@
             </a>
             <!-- Post 2 -->
             <a href="http://xhslink.com/o/2ej5kZCgbXI" target="_blank" class="phone-post block">
-              <img src="image/封面2.jpg" alt="大学 大不了自己学|线上大学老师推荐！" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-02.jpg" alt="大学 大不了自己学|线上大学老师推荐！" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">大学 大不了自己学|线上大学老师推荐！</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -777,7 +581,7 @@
             </a>
             <!-- Post 3 -->
             <a href="https://v.douyin.com/63TzGLvcqWw/" target="_blank" class="phone-post block">
-              <img src="image/封面3.jpg" alt="考前急救！90%的人计算机二级挂在这6个细节，看完不丢分" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-03.jpg" alt="考前急救！90%的人计算机二级挂在这6个细节，看完不丢分" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">考前急救！90%的人计算机二级挂在这6个细节，看完不丢分</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -788,7 +592,7 @@
             </a>
             <!-- Post 4 -->
             <a href="https://v.douyin.com/6c9TDp8YR8I/" target="_blank" class="phone-post block">
-              <img src="image/封面4.jpg" alt="10大应届生补贴，错过再等一辈子" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-04.jpg" alt="10大应届生补贴，错过再等一辈子" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">10大应届生补贴，错过再等一辈子</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -799,7 +603,7 @@
             </a>
             <!-- Post 5 -->
             <a href="http://xhslink.com/o/1jChXE1hYLC" target="_blank" class="phone-post block">
-              <img src="image/封面5.jpg" alt="大一大二下可以做什么？一篇速览" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-05.jpg" alt="大一大二下可以做什么？一篇速览" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">大一大二下可以做什么？一篇速览</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -810,7 +614,7 @@
             </a>
             <!-- Post 6 -->
             <a href="https://v.douyin.com/GCOn9HGPNWc/" target="_blank" class="phone-post block">
-              <img src="image/封面6.jpg" alt="三八妇女节送礼指南学生党也能送到心巴上的礼物！" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-06.jpg" alt="三八妇女节送礼指南学生党也能送到心巴上的礼物！" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">三八妇女节送礼指南学生党也能送到心巴上的礼物！</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -821,7 +625,7 @@
             </a>
             <!-- Post 7 -->
             <a href="https://v.douyin.com/Xh1iPmY3jmo/" target="_blank" class="phone-post block">
-              <img src="image/封面7.jpg" alt="告别又杂又乱的PPT！三步让你的比赛PPT变高级～让评委迅速抓重点" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-07.jpg" alt="告别又杂又乱的PPT！三步让你的比赛PPT变高级～让评委迅速抓重点" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">告别又杂又乱的PPT！三步让你的比赛PPT变高级～让评委迅速抓重点</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -832,7 +636,7 @@
             </a>
             <!-- Post 8 -->
             <a href="http://xhslink.com/o/1LczYwFaDCC" target="_blank" class="phone-post block">
-              <img src="image/封面8.jpg" alt="大学大不了自己学|线上大学老师推荐（考证版）" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-08.jpg" alt="大学大不了自己学|线上大学老师推荐（考证版）" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">大学大不了自己学|线上大学老师推荐（考证版）</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -843,7 +647,7 @@
             </a>
             <!-- Post 9 -->
             <a href="https://v.douyin.com/54X0FpjOu-M/" target="_blank" class="phone-post block">
-              <img src="image/封面9.jpg" alt="三创赛备赛全攻略！想要打比赛的大学生看过了" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-09.jpg" alt="三创赛备赛全攻略！想要打比赛的大学生看过了" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">三创赛备赛全攻略！想要打比赛的大学生看过了</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -854,7 +658,7 @@
             </a>
             <!-- Post 10 -->
             <a href="https://v.douyin.com/yvajpmkxmaA/" target="_blank" class="phone-post block">
-              <img src="image/封面10.jpg" alt="寒假备考计算机二级全流程指南" class="w-full aspect-[3/4] object-contain bg-gray-50">
+              <img src="image/cover-post-10.jpg" alt="寒假备考计算机二级全流程指南" class="w-full aspect-[3/4] object-contain bg-gray-50">
               <div class="p-2.5">
                 <p class="text-xs font-medium leading-snug line-clamp-2" style="color: var(--text-dark);">寒假备考计算机二级全流程指南</p>
                 <div class="flex items-center gap-2.5 mt-1.5 text-xs" style="color: var(--text-light);">
@@ -865,6 +669,168 @@
             </a>
           </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="relative z-10 flex justify-center -mb-12">
+  <div class="flex items-center gap-3 opacity-30">
+    <span class="text-xs" style="color: var(--peach);">✦</span>
+    <div class="w-16 h-px bg-gradient-to-r from-transparent via-[#FF9AAE] to-transparent"></div>
+    <span class="text-xs" style="color: var(--sky);">✦</span>
+  </div>
+</div>
+
+<!-- ===== Projects Section ===== -->
+<section id="projects" class="relative z-10 py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <div class="section-badge mb-4">🚀 AI 项目</div>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">
+        <span class="gradient-text">AI Explorer</span>
+        <span class="text-2xl md:text-3xl font-medium ml-3" style="color: var(--text-mid);">AI 探索者</span>
+      </h2>
+      <p style="color: var(--text-mid); font-size: 17px;">探索 AI 赋能工作场景，工具驱动效率增长</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex justify-center gap-3 mb-10 reveal">
+      <button class="category-tab active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300" data-category="vibecoding" style="background: rgba(255,140,82,0.08); color: var(--text-mid); border: 1px solid rgba(255,140,82,0.15);">
+        ✦ vibecoding
+      </button>
+
+      <button class="category-tab px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300" data-category="aigc" style="background: rgba(255,140,82,0.08); color: var(--text-mid); border: 1px solid rgba(255,140,82,0.15);">
+        AIGC 视频
+      </button>
+    </div>
+
+    <div class="flex overflow-x-auto gap-6 snap-x snap-mandatory pb-4 scrollbar-hide" id="projects-grid">
+      <!-- vibecoding Card 4 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="vibecoding">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(184,232,224,0.12), rgba(181,216,247,0.1));">
+          <img src="image/video-analysis-tool.jpg" alt="爆款视频分析工具" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">爆款视频分析工具</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">支持 B 站 / 抖音 / YouTube 视频链接解析与文字稿提取，实现文案结构化拆解、数据可视化与爆款要素分析，帮助创作者快速优化视频脚本。</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-orange">Vibe Coding</span>
+            <span class="tag-pill tag-pill-mint">内容分析</span>
+          </div>
+          <a href="https://zzzywink.github.io/script-analysis-tool/" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- vibecoding Card 3 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="vibecoding">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255,216,155,0.12), rgba(255,140,82,0.08));">
+          <img src="image/account-data-analysis.jpg" alt="账号数据分析工具" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">账号数据分析工具</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">该项目构建了一个短视频爆款分析工具，通过数据清洗、指标对比、分布直方图、相关性分析、时间趋势挖掘及逻辑回归预测，生成交互式网页看板。</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-orange">Vibe Coding</span>
+            <span class="tag-pill tag-pill-sky">数据分析</span>
+          </div>
+          <a href="https://zzzywink.github.io/short-video-analyzer/index.html" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- vibecoding Card 2 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="vibecoding">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(212,197,240,0.12), rgba(184,232,224,0.1));">
+          <img src="image/topic-helper.jpg" alt="选题助手" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">选题助手</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">结合我的自媒体赛道，输出"大学校园、校园干货、教育"高度相关的优质选题</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-orange">Vibe Coding</span>
+            <span class="tag-pill tag-pill-mint">内容创作</span>
+          </div>
+          <a href="https://www.coze.cn/store/agent/7633999652631117851?bot_id=true" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- vibecoding Card 1 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="vibecoding">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255,140,82,0.1), rgba(255,154,174,0.08));">
+          <img src="image/resume-matcher.jpg" alt="简历智能匹配助手" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">简历智能匹配助手</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">上传目标岗位 JD 与个人简历，智能解析岗位任职要求，自动对标简历原有内容，智能优化重构文案，一键生成高度适配岗位 JD 的定制化专属简历。</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-orange">Vibe Coding</span>
+            <span class="tag-pill tag-pill-pink">LLM</span>
+          </div>
+          <a href="https://zs8tgjdmzm.coze.site" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- AIGC 视频 Card 1 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="aigc">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(255,140,82,0.1), rgba(255,154,174,0.08));">
+          <img src="image/aigc-video/ceo-drama.jpg" alt="霸总短剧" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">霸总短剧</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">AI 生成的霸道总裁风格短剧，沉浸式剧情体验。</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-orange">AIGC</span>
+            <span class="tag-pill tag-pill-pink">短剧</span>
+          </div>
+          <a href="https://v.kuaishou.com/KMyhxDJN" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- AIGC 视频 Card 2 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="aigc">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(126,207,192,0.12), rgba(181,216,247,0.1));">
+          <img src="image/aigc-video/ai-studio.jpg" alt="ai摄影棚" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight" style="color: var(--text-dark);">ai摄影棚</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">AI 驱动的虚拟摄影棚，智能生成专业级人像与产品图。</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-mint">AIGC</span>
+            <span class="tag-pill tag-pill-sky">摄影</span>
+          </div>
+          <a href="https://v.kuaishou.com/np5H3v95" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- AIGC 视频 Card 3 -->
+      <div class="project-card glass-soft hover-lift overflow-hidden flex flex-col flex-shrink-0 w-[300px] md:w-[360px] snap-start" data-category="aigc">
+        <div class="h-44 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(212,197,240,0.12), rgba(255,154,174,0.08));">
+          <img src="image/aigc-video/giant-product.jpg" alt="产品巨物" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold tracking-tight gradient-text">产品巨物</h3>
+          <p class="text-sm mt-2 flex-1" style="color: var(--text-mid);">巨物产品躺在沙滩上，靠夸张视觉冲击抓住观者眼球</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag-pill tag-pill-pink">AIGC</span>
+            <span class="tag-pill tag-pill-orange">直播</span>
+          </div>
+          <a href="https://v.kuaishou.com/JrSuVkcJ" target="_blank" class="btn-hover mt-5 inline-flex items-center gap-2 px-5 py-3 text-white text-sm font-medium rounded-xl w-fit" style="background: var(--orange);">
+            查看详情 <i data-lucide="arrow-right" class="w-4 h-4" stroke-width="1.5"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -890,6 +856,7 @@
         <span class="text-2xl md:text-3xl font-medium ml-3" style="color: var(--text-mid);">探索者</span>
       </h2>
       <p style="color: var(--text-mid); font-size: 17px;">点击卡片，探索我的多元宇宙 ✦</p>
+      <p class="mt-2" style="color: var(--text-mid); font-size: 17px;">愿意主动探索、不断突破自己的人</p>
     </div>
 
     <!-- Tarot Card Deck -->
@@ -916,20 +883,6 @@
   </div>
 </div>
 
-<!-- ===== Footer ===== -->
-<footer class="relative z-10 py-16 px-6 text-center">
-  <div class="glass-soft max-w-lg mx-auto p-8">
-    <h3 class="text-2xl font-semibold tracking-tight gradient-text mb-3">Let's Connect ✦</h3>
-    <p class="mb-6" style="color: var(--text-mid);">如果你对 AI 产品、内容创作或 Vibe Coding 感兴趣，欢迎交流！</p>
-    <div class="flex justify-center gap-6 text-xl" style="color: var(--text-mid);">
-      <a href="#" class="hover:text-[#FF8C52] transition-colors duration-200"><i data-lucide="github" class="w-5 h-5" stroke-width="1.5"></i></a>
-      <a href="#" class="hover:text-[#FF8C52] transition-colors duration-200"><i data-lucide="twitter" class="w-5 h-5" stroke-width="1.5"></i></a>
-      <a href="#" class="hover:text-[#FF8C52] transition-colors duration-200"><i data-lucide="linkedin" class="w-5 h-5" stroke-width="1.5"></i></a>
-      <a href="#" class="hover:text-[#FF8C52] transition-colors duration-200"><i data-lucide="mail" class="w-5 h-5" stroke-width="1.5"></i></a>
-    </div>
-  </div>
-  <p class="text-sm mt-8" style="color: var(--text-light);">© 2025 Yuan · Built with Vibe Coding ✦</p>
-</footer>
 
 <script>
 // ===== Background Particles =====
@@ -1124,10 +1077,10 @@ document.querySelectorAll('#mobile-menu a').forEach(function(link) {
   var selectedCardIndex = null;
 
   var cardData = [
-    { title: '24h Korea Speedrun', desc: '在 24 小时内打卡首尔 12 家咖啡馆与创意空间，用镜头记录城市灵感与设计美学。', emoji: '🇰🇷' },
-    { title: 'AI 产品沉思录', desc: '持续记录 AI 产品设计与商业化思考，从 LLM 到 Agent，探索 AI-Native 产品的无限可能。', emoji: '🧠' },
-    { title: '创作者的日常', desc: '分享内容创作背后的故事与方法论，拆解每一篇爆款笔记的诞生过程。', emoji: '✍️' },
-    { title: 'Vibe Coding 实践', desc: '用自然语言与 AI 协作编程，探索"氛围编程"如何改变产品原型的设计与验证方式。', emoji: '💻' },
+    { title: '★ 商业思维沉淀', desc: '深耕校园本地市场，独立搭建完整商业闭环，擅长挖掘用户隐性刚需，拥有从需求调研到落地变现的全链路运营思路。', emoji: '💡' },
+    { title: '★ 高效落地执行力', desc: '兼具创意与落地意识，不局限纸面规划，能快速将运营思路、创新工具方案落地验证，以结果为导向推进项目。', emoji: '⚡' },
+    { title: '★ 持续迭代抗压能力', desc: '可同步兼顾多线任务，擅长依据数据复盘持续优化策略，适配电商行业高强度、快速迭代的工作节奏。', emoji: '🔥' },
+    { title: '★ 多方沟通协调能力', desc: '拥有 ToC 用户运营、ToB 商务对接双重经验，可顺畅对接品牌、用户多方群体，高效推进跨角色协作落地。', emoji: '🤝' },
     { title: '数据思维 × 产品直觉', desc: '在数据分析与产品直觉之间寻找平衡，用数据验证假设，用直觉寻找方向。', emoji: '📈' },
   ];
 
